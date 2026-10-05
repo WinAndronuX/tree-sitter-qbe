@@ -1,6 +1,6 @@
 # tree-sitter-qbe
 
-[Tree-sitter](https://tree-sitter.github.io/) grammar for the [QBE](https://c9x.me/qbe/) Intermediate Language (IL).
+[Tree-sitter](https://tree-sitter.github.io/) grammar for the [QBE](https://c9x.me/compile/) Intermediate Language (IL).
 
 ## Features
 

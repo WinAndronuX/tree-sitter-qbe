@@ -1,0 +1,1293 @@
+[
+  {
+    "type": "abi_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "base_type",
+          "named": true
+        },
+        {
+          "type": "subword_type",
+          "named": true
+        },
+        {
+          "type": "type_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "base_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "call_arg",
+    "named": true,
+    "fields": {
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "abi_type",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "val",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "call_instruction",
+    "named": true,
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "temporary_identifier",
+            "named": true
+          }
+        ]
+      },
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "val",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "abi_type",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "call_arg",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "constant",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "global_identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_definition",
+    "named": true,
+    "fields": {
+      "align": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "global_identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "data_field",
+          "named": true
+        },
+        {
+          "type": "linkage",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_field",
+    "named": true,
+    "fields": {
+      "count": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "extended_type",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "data_item",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_item",
+    "named": true,
+    "fields": {
+      "offset": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
+      "symbol": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "global_identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dbgfile_directive",
+    "named": true,
+    "fields": {
+      "path": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "dbgloc_instruction",
+    "named": true,
+    "fields": {
+      "col": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
+      "line": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "extended_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "function_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "global_identifier",
+            "named": true
+          }
+        ]
+      },
+      "return_type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "abi_type",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "call_instruction",
+          "named": true
+        },
+        {
+          "type": "dbgloc_instruction",
+          "named": true
+        },
+        {
+          "type": "jump_instruction",
+          "named": true
+        },
+        {
+          "type": "label",
+          "named": true
+        },
+        {
+          "type": "linkage",
+          "named": true
+        },
+        {
+          "type": "parameter",
+          "named": true
+        },
+        {
+          "type": "phi_instruction",
+          "named": true
+        },
+        {
+          "type": "regular_instruction",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "instruction_op",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "jump_instruction",
+    "named": true,
+    "fields": {
+      "condition": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "val",
+            "named": true
+          }
+        ]
+      },
+      "if_false": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "label_identifier",
+            "named": true
+          }
+        ]
+      },
+      "if_true": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "label_identifier",
+            "named": true
+          }
+        ]
+      },
+      "target": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "label_identifier",
+            "named": true
+          }
+        ]
+      },
+      "val": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "val",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "label",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "label_identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "linkage",
+    "named": true,
+    "fields": {
+      "flags": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "parameter",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "temporary_identifier",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "abi_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "phi_branch",
+    "named": true,
+    "fields": {
+      "label": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "label_identifier",
+            "named": true
+          }
+        ]
+      },
+      "val": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "val",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "phi_instruction",
+    "named": true,
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "temporary_identifier",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "base_type",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "phi_branch",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "regular_instruction",
+    "named": true,
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "temporary_identifier",
+            "named": true
+          }
+        ]
+      },
+      "op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "instruction_op",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "base_type",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "val",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "data_definition",
+          "named": true
+        },
+        {
+          "type": "dbgfile_directive",
+          "named": true
+        },
+        {
+          "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "type_definition",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subword_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "type_definition",
+    "named": true,
+    "fields": {
+      "align": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type_identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "type_field",
+          "named": true
+        },
+        {
+          "type": "type_union_member",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_field",
+    "named": true,
+    "fields": {
+      "count": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "extended_type",
+            "named": true
+          },
+          {
+            "type": "type_identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_union_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "type_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "val",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "constant",
+          "named": true
+        },
+        {
+          "type": "temporary_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "...",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "add",
+    "named": false
+  },
+  {
+    "type": "align",
+    "named": false
+  },
+  {
+    "type": "alloc1",
+    "named": false
+  },
+  {
+    "type": "alloc16",
+    "named": false
+  },
+  {
+    "type": "alloc2",
+    "named": false
+  },
+  {
+    "type": "alloc4",
+    "named": false
+  },
+  {
+    "type": "alloc8",
+    "named": false
+  },
+  {
+    "type": "and",
+    "named": false
+  },
+  {
+    "type": "b",
+    "named": false
+  },
+  {
+    "type": "blit",
+    "named": false
+  },
+  {
+    "type": "call",
+    "named": false
+  },
+  {
+    "type": "cast",
+    "named": false
+  },
+  {
+    "type": "ceqd",
+    "named": false
+  },
+  {
+    "type": "ceql",
+    "named": false
+  },
+  {
+    "type": "ceqs",
+    "named": false
+  },
+  {
+    "type": "ceqw",
+    "named": false
+  },
+  {
+    "type": "cged",
+    "named": false
+  },
+  {
+    "type": "cges",
+    "named": false
+  },
+  {
+    "type": "cgtd",
+    "named": false
+  },
+  {
+    "type": "cgts",
+    "named": false
+  },
+  {
+    "type": "cled",
+    "named": false
+  },
+  {
+    "type": "cles",
+    "named": false
+  },
+  {
+    "type": "cltd",
+    "named": false
+  },
+  {
+    "type": "clts",
+    "named": false
+  },
+  {
+    "type": "cned",
+    "named": false
+  },
+  {
+    "type": "cnel",
+    "named": false
+  },
+  {
+    "type": "cnes",
+    "named": false
+  },
+  {
+    "type": "cnew",
+    "named": false
+  },
+  {
+    "type": "cod",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "common",
+    "named": false
+  },
+  {
+    "type": "copy",
+    "named": false
+  },
+  {
+    "type": "cos",
+    "named": false
+  },
+  {
+    "type": "csgel",
+    "named": false
+  },
+  {
+    "type": "csgew",
+    "named": false
+  },
+  {
+    "type": "csgtl",
+    "named": false
+  },
+  {
+    "type": "csgtw",
+    "named": false
+  },
+  {
+    "type": "cslel",
+    "named": false
+  },
+  {
+    "type": "cslew",
+    "named": false
+  },
+  {
+    "type": "csltl",
+    "named": false
+  },
+  {
+    "type": "csltw",
+    "named": false
+  },
+  {
+    "type": "cugel",
+    "named": false
+  },
+  {
+    "type": "cugew",
+    "named": false
+  },
+  {
+    "type": "cugtl",
+    "named": false
+  },
+  {
+    "type": "cugtw",
+    "named": false
+  },
+  {
+    "type": "culel",
+    "named": false
+  },
+  {
+    "type": "culew",
+    "named": false
+  },
+  {
+    "type": "cultl",
+    "named": false
+  },
+  {
+    "type": "cultw",
+    "named": false
+  },
+  {
+    "type": "cuod",
+    "named": false
+  },
+  {
+    "type": "cuos",
+    "named": false
+  },
+  {
+    "type": "d",
+    "named": false
+  },
+  {
+    "type": "data",
+    "named": false
+  },
+  {
+    "type": "dbgfile",
+    "named": false
+  },
+  {
+    "type": "dbgloc",
+    "named": false
+  },
+  {
+    "type": "div",
+    "named": false
+  },
+  {
+    "type": "dtosi",
+    "named": false
+  },
+  {
+    "type": "dtoui",
+    "named": false
+  },
+  {
+    "type": "env",
+    "named": false
+  },
+  {
+    "type": "export",
+    "named": false
+  },
+  {
+    "type": "extern",
+    "named": false
+  },
+  {
+    "type": "exts",
+    "named": false
+  },
+  {
+    "type": "extsb",
+    "named": false
+  },
+  {
+    "type": "extsh",
+    "named": false
+  },
+  {
+    "type": "extsw",
+    "named": false
+  },
+  {
+    "type": "extub",
+    "named": false
+  },
+  {
+    "type": "extuh",
+    "named": false
+  },
+  {
+    "type": "extuw",
+    "named": false
+  },
+  {
+    "type": "float",
+    "named": true
+  },
+  {
+    "type": "function",
+    "named": false
+  },
+  {
+    "type": "global_identifier",
+    "named": true
+  },
+  {
+    "type": "h",
+    "named": false
+  },
+  {
+    "type": "hlt",
+    "named": false
+  },
+  {
+    "type": "jmp",
+    "named": false
+  },
+  {
+    "type": "jnz",
+    "named": false
+  },
+  {
+    "type": "l",
+    "named": false
+  },
+  {
+    "type": "label_identifier",
+    "named": true
+  },
+  {
+    "type": "load",
+    "named": false
+  },
+  {
+    "type": "loadd",
+    "named": false
+  },
+  {
+    "type": "loadl",
+    "named": false
+  },
+  {
+    "type": "loads",
+    "named": false
+  },
+  {
+    "type": "loadsb",
+    "named": false
+  },
+  {
+    "type": "loadsh",
+    "named": false
+  },
+  {
+    "type": "loadsw",
+    "named": false
+  },
+  {
+    "type": "loadub",
+    "named": false
+  },
+  {
+    "type": "loaduh",
+    "named": false
+  },
+  {
+    "type": "loaduw",
+    "named": false
+  },
+  {
+    "type": "loadw",
+    "named": false
+  },
+  {
+    "type": "mul",
+    "named": false
+  },
+  {
+    "type": "neg",
+    "named": false
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "or",
+    "named": false
+  },
+  {
+    "type": "phi",
+    "named": false
+  },
+  {
+    "type": "rem",
+    "named": false
+  },
+  {
+    "type": "ret",
+    "named": false
+  },
+  {
+    "type": "s",
+    "named": false
+  },
+  {
+    "type": "sar",
+    "named": false
+  },
+  {
+    "type": "sb",
+    "named": false
+  },
+  {
+    "type": "section",
+    "named": false
+  },
+  {
+    "type": "sh",
+    "named": false
+  },
+  {
+    "type": "shl",
+    "named": false
+  },
+  {
+    "type": "shr",
+    "named": false
+  },
+  {
+    "type": "sltof",
+    "named": false
+  },
+  {
+    "type": "storeb",
+    "named": false
+  },
+  {
+    "type": "stored",
+    "named": false
+  },
+  {
+    "type": "storeh",
+    "named": false
+  },
+  {
+    "type": "storel",
+    "named": false
+  },
+  {
+    "type": "stores",
+    "named": false
+  },
+  {
+    "type": "storew",
+    "named": false
+  },
+  {
+    "type": "stosi",
+    "named": false
+  },
+  {
+    "type": "stoui",
+    "named": false
+  },
+  {
+    "type": "string",
+    "named": true
+  },
+  {
+    "type": "sub",
+    "named": false
+  },
+  {
+    "type": "swtof",
+    "named": false
+  },
+  {
+    "type": "temporary_identifier",
+    "named": true
+  },
+  {
+    "type": "thread",
+    "named": false
+  },
+  {
+    "type": "truncd",
+    "named": false
+  },
+  {
+    "type": "type",
+    "named": false
+  },
+  {
+    "type": "type_identifier",
+    "named": true
+  },
+  {
+    "type": "ub",
+    "named": false
+  },
+  {
+    "type": "udiv",
+    "named": false
+  },
+  {
+    "type": "uh",
+    "named": false
+  },
+  {
+    "type": "ultof",
+    "named": false
+  },
+  {
+    "type": "urem",
+    "named": false
+  },
+  {
+    "type": "uwtof",
+    "named": false
+  },
+  {
+    "type": "vaarg",
+    "named": false
+  },
+  {
+    "type": "vastart",
+    "named": false
+  },
+  {
+    "type": "w",
+    "named": false
+  },
+  {
+    "type": "xor",
+    "named": false
+  },
+  {
+    "type": "z",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]

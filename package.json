@@ -1,0 +1,24 @@
+{
+  "name": "tree-sitter-qbe",
+  "version": "0.1.0",
+  "description": "QBE Intermediate Language grammar for tree-sitter",
+  "main": "bindings/node",
+  "keywords": [
+    "tree-sitter",
+    "qbe",
+    "compiler",
+    "ssa"
+  ],
+  "author": "WinAndronuX",
+  "license": "MIT",
+  "tree-sitter": [
+    {
+      "scope": "source.qbe",
+      "file-types": [
+        "ssa",
+        "qbe"
+      ],
+      "injection-regex": "^(qbe|ssa)$"
+    }
+  ]
+}
